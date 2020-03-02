@@ -3,7 +3,7 @@
 ## Goal:
 A user friendly web platform that allows users to transcribe videos (such as lecture recordings) into documents that users can export.
 
-### Tech Stack
+### Tech Stack:
 
 React (frontend) and Python/Flask (backend). Also subject to change
 

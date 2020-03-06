@@ -12,7 +12,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo"/>
         <form>
           <label className="App-url">
-            URL INSERT HERE:
+            URL INSERT HEREE:
             <input type="URL" name="URL HERE" />
             <input type="submit" value="Submit" />
           </label>

@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 class Counter extends Component {
-    state = {
-        count : 0
-    };
+    
+    constructor(){
+        super();
+        this.state = {
+            counter:0
+        }
+    }
+    
+    incrementState(){
+        this.setState({
+            counter:this.state.counter+1
+        })
+    }
+
     styles = {
         fontSize: 15,
-
     };
     render() { 
-        let number = 0;
         return (
         <div className="index">
             <h1 className="name">Jieshu Huang</h1>
-        <Button variant="contained" color="primary" className = "button" onClick = {number +=1}>{number}</Button>
+        <Button variant="contained" color="primary" className = "button" onClick = {()=>{this.incrementState()}} >click</Button>
+        <span styles = {this.styles} className="badge badge-primary m-2">{this.state.counter}</span>
             <p></p>
             <image className = "image" style = {{width: 1000, height: 500}} src = {require('./0001.jpg')} alt=''/>
             <p></p>

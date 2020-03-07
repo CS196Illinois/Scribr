@@ -1,0 +1,28 @@
+.index {
+    color:black;
+}
+.button {
+    padding: 0%;
+}
+.name {
+    margin-top: 1cm;
+    font-weight: bold;
+    font-size: 2cm;
+    margin-left: 4.5in;
+}
+.image {
+    margin-left: 1.9in;
+}
+.quote {
+    font-style: italic;
+    margin-left: 1.9in;
+    font-size: 0.5cm;
+}
+.introduction {
+    margin-left: 1.9in;
+    font-size: 0.4cm;
+}
+.button {
+    margin-left: 8in;
+    font-size: 0.8cm;
+}

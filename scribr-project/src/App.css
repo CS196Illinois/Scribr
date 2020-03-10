@@ -1,0 +1,22 @@
+.scribr-logo {
+  min-width: 100px;
+  max-height: 3rem;
+  padding-top: 15px;
+  display: block;
+  margin-right: 35%;
+}
+
+hr {
+  border-top: 5px;
+}
+.scribr-hat {
+  max-height: 6rem;
+  padding-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: 26%;
+}
+
+.navigationbar {
+  text-align: center;
+}

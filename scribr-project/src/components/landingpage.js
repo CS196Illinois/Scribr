@@ -7,24 +7,24 @@ class Landing extends Component {
     state = {  }
     render() {
         return(
-            <div className = "landingLogo"style={{width:'100%', margin: 'auto'}}>
-              <div className="words">
-                <h2>WELCOME TO</h2>
-                <h6>space</h6>
-                <h2>THE DARK SIDE OF </h2>
-              </div>
-                <div class="row">
-                  <div class="column">
-                    <img src={Notecard} alt="note" className="landingNote"/>
-                  </div>
-                  <div class="column">
-                     <img src={LogoHat} alt="hat" className="landingHat"/>
-                  </div>
-                  <div class="column">
-                    <img src={Poker} alt="poker" className="landingPoker"/>
-                  </div>
+        <div className = "landingLogo"style={{width:'100%', margin: 'auto'}}>
+          <div className="words">
+            <h2>WELCOME TO</h2>
+            <h6>space</h6>
+            <h2>THE DARK SIDE OF </h2>
+          </div>
+          <div class="image123">
+                <div class="imgContainer">
+                    <img src={Notecard} alt="card" className="card"/>
                 </div>
-            </div>
+                <div class="imgContainer">
+                    <img src={LogoHat} alt="hat" className="hat"/>
+                </div>
+                <div class="imgContainer">
+                    <img src={Poker} alt="poke" className="poke"/>
+                </div>
+          </div>
+        </div>
         );
     }
 }

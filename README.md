@@ -1,4 +1,4 @@
-# team3 Project (Name Subject to Change)
+# Scribr 
 
 ## Goal:
 A user friendly web platform that allows users to transcribe videos (such as lecture recordings) into documents that users can export.

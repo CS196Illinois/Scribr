@@ -1,0 +1,33 @@
+.magic-header {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.magic-url {
+    font-size: 25px;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+
+.magic-progress {
+    text-align: center;
+}
+
+.magic-hat {
+    width: 100px;;
+    margin-left: auto;
+    margin-top: 6%;
+    margin-bottom: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.magic-button {
+    padding-left: 8%;
+}
+
+.magic-space {
+    color: white;
+}

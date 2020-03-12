@@ -18,7 +18,10 @@ class Landing extends Component {
                     <img src={Notecard} alt="card" className="card"/>
                 </div>
                 <div class="imgContainer">
+                <a href="/magic">
                     <img src={LogoHat} alt="hat" className="hat"/>
+                    <h6>Click The Logo!</h6>
+                </a>
                 </div>
                 <div class="imgContainer">
                     <img src={Poker} alt="poke" className="poke"/>

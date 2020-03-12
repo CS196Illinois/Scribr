@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import LogoHat from '../pictures/logo_hat.png';
+import AboutImage from '../pictures/about.png';
+import './about.css';
 class About extends Component {
     state = {  }
     render() {
         return(
-            <div className = "word">
-              <img src={LogoHat}
-                alt = "hat"
-                className="landingHat"/>
-            </div>
+        <div>
+            <img className="aboutimage" src={AboutImage} alt="aboutimage" style={{maxWidth: "80%", marginLeft:"12%"}}/>
+        </div>
         );
     }
 }
 export default About;
-

@@ -9,11 +9,13 @@ function App() {
     <div style={{height: '800px', position: 'relative'}}>
     <Layout fixedHeader>
         <Header className = "header-color" transparent title={<span style={{ color: '#201115' }}></span>}>
-        <img
-           src={Logo} 
-           alt="logo1"
-           className="scribr-logo"
-        />
+        <a href="/">
+          <img
+            src={Logo} 
+            alt="logo1"
+            className="scribr-logo"
+          />
+        </a>
         <img
            src={LogoHat}
            alt="logo2"

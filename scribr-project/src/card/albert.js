@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './albert.css';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
-import Li from '../pictures/Albert.jpg';
+import Li from '../pictures/albert.jpeg';
 class Albert extends Component {
     state = {  }
     render() {

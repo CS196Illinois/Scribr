@@ -1,9 +1,9 @@
 .scribr-logo {
-  min-width: 100px;
-  max-height: 3rem;
+  min-width: 120px;
+  max-height: 5rem;
   padding-top: 15px;
   display: block;
-  margin-right: 35%;
+  margin-right: 55%;
 }
 
 hr {
@@ -13,8 +13,8 @@ hr {
   max-height: 6rem;
   padding-top: 15px;
   display: block;
-  margin-left: auto;
-  margin-right: 26%;
+  margin-left: 35%;
+  margin-right: 28%;
 }
 
 .navigationbar {

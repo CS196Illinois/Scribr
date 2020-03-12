@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './counter.css';
+import './magictwo.css';
 import Counter from './magicComponent/counter.jsx'
 
 

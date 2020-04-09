@@ -4,6 +4,9 @@ import './magic.css';
 import { Textfield, Button, ProgressBar } from 'react-mdl'
 import ReactPlayer from 'react-player';
 
+// TODO: button to open up file explorer, letting user input video file - Julie
+// TODO: make transcribe button un-clickable until video is put in - Alyssa
+// TODO: Make a loading screen so that user knows the progress of transcription before it goes to magictwo page - Jessica
 
 class Magic extends Component {
     state = {  }

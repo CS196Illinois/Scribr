@@ -1,5 +1,5 @@
 import flask
-import flask_cors import CORS
+from flask_cors import CORS
 #Python 2.x program to transcribe an Audio file 
 import speech_recognition as sr 
   
@@ -28,7 +28,7 @@ app = flask.Flask("__main__")
 CORS(app)
 
 @app.route("/")
-def video():
-    return flask.render_template("index.thml", token=text)
+def my_index():
+    return flask.render_template("index.html",token=text)
 
 app.run(debug=True)

@@ -10,7 +10,7 @@ import ReactPlayer from 'react-player';
 
 class Magic extends Component {
     state = { 
-        const value = !this.state.value
+        let value = !this.state.value
     }
     render() {
         return(

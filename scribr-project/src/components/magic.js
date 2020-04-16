@@ -27,10 +27,7 @@ class Magic extends Component {
                     <Textfield
                         label="URL..."
                         style={{width: '400px'}}
-                        input="URL"
-                        if URL: true {
-                            document.getElementById("scribeButton").disabled = false;
-                        }           
+                        input="URL"           
                     />
                     {/* Accent-colored button with ripple */}
                     <Button raised accent ripple
@@ -42,6 +39,7 @@ class Magic extends Component {
                         {/* Colored Raised button */}
                     <Button 
                         disabled={true}
+                        onClick={() => alert('Please enter URL first')}
                         id="scribeButton"
                         raised colored style={{margin: "0%" }}>
                         SCRIBE!

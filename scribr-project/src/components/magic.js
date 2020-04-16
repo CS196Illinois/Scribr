@@ -39,7 +39,6 @@ class Magic extends Component {
                         {/* Colored Raised button */}
                     <Button 
                         disabled={true}
-                        onClick={() => alert('Please enter URL first')}
                         id="scribeButton"
                         raised colored style={{margin: "0%" }}>
                         SCRIBE!

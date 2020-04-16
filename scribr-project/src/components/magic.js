@@ -11,8 +11,8 @@ import ReactPlayer from 'react-player';
 class Magic extends Component {
     state = { }
     render() {
+        var isDisabled = true;
         return(
-            var isDisabled = true;
             <div className = "word">
               <img src={BlackLogo}
                 alt = "hat"

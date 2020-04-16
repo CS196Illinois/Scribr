@@ -9,7 +9,7 @@ import ReactPlayer from 'react-player';
 // TODO: Make a loading screen so that user knows the progress of transcription before it goes to magictwo page - Jessica
 
 class Magic extends Component {
-    this.state = { 
+    state = { 
         isDisabled: true
     }
     render() {
@@ -31,7 +31,7 @@ class Magic extends Component {
                         style={{width: '400px'}}
                         input="URL"
                         if URL: true {
-                            this.isDisabled: false
+                            isDisabled: false
                         }
                     />
                     {/* Accent-colored button with ripple */}

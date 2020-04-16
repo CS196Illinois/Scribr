@@ -28,7 +28,7 @@ class Magic extends Component {
                         label="URL..."
                         style={{width: '400px'}}
                         input="URL"
-                        if URL.length > 0 {
+                        if URL: true {
                             value={this.state.value}
                         }
                     />

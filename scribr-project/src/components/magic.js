@@ -29,7 +29,7 @@ class Magic extends Component {
                         style={{width: '400px'}}
                         input="URL"
                         if URL: true {
-                            this.state.value
+                            this.state.value={true}
                         }
                     />
                     {/* Accent-colored button with ripple */}

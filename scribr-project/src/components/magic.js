@@ -38,7 +38,7 @@ class Magic extends Component {
                     </Button>
                         {/* Colored Raised button */}
                     <Button href="/magictwo" 
-                        disabled
+                        disabled={true}
                         raised colored style={{margin: "0%" }}>
                         SCRIBE!
                     </Button>

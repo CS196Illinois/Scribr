@@ -37,7 +37,7 @@ class Magic extends Component {
                         Upload
                     </Button>
                         {/* Colored Raised button */}
-                    <Button href="/magictwo" raised colored style={{margin: "0%" }}>SCRIBE!</Button>
+                    <Button href="/magictwo" onClick="return false" raised colored style={{margin: "0%" }}>SCRIBE!</Button>
                     <div className="magic-progress">
                         {/* Progress Bar with Indeterminate Progress */}
                         <ProgressBar indeterminate position="left"/>

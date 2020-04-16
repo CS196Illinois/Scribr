@@ -28,7 +28,7 @@ class Magic extends Component {
                         label="URL..."
                         style={{width: '400px'}}
                         input="URL"
-                        if (input: true) {
+                        if (magic-url: true) {
                             value={this.state.value}
                         }
                     />

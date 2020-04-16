@@ -9,10 +9,9 @@ import ReactPlayer from 'react-player';
 // TODO: Make a loading screen so that user knows the progress of transcription before it goes to magictwo page - Jessica
 
 class Magic extends Component {
-    state = { 
-        var isDisabled = true
-    }
+    state = { }
     render() {
+        var isDisabled = true;
         return(
             <div className = "word">
               <img src={BlackLogo}

@@ -9,7 +9,9 @@ import ReactPlayer from 'react-player';
 // TODO: Make a loading screen so that user knows the progress of transcription before it goes to magictwo page - Jessica
 
 class Magic extends Component {
-    state = { }
+    this.state = { 
+        isDisabled: true
+    }
     render() {
         return(
             <div className = "word">
@@ -29,7 +31,7 @@ class Magic extends Component {
                         style={{width: '400px'}}
                         input="URL"
                         if URL: true {
-                            state.value={true}
+                            this.isDisabled: false
                         }
                     />
                     {/* Accent-colored button with ripple */}
@@ -41,7 +43,7 @@ class Magic extends Component {
                     </Button>
                         {/* Colored Raised button */}
                     <Button 
-                        disabled={!this.state.value}
+                        disabled={!isDisabled}
                         raised colored style={{margin: "0%" }}>
                         SCRIBE!
                     </Button>

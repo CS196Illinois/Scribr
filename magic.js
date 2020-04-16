@@ -1,0 +1,78 @@
+import React, { Component } from 'react';
+import BlackLogo from '../pictures/blacklogo.png';
+import './magic.css';
+import { Textfield, Button, ProgressBar } from 'react-mdl'
+import ReactPlayer from 'react-player';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Spinner from 'react-bootstrap/Spinner'
+
+// TODO: button to open up file explorer, letting user input video file - Julie
+// TODO: make transcribe button un-clickable until video is put in - Alyssa
+// TODO: Make a loading screen so that user knows the progress of transcription before it goes to magictwo page - Jessica
+
+class Magic extends Component {
+    state = { 
+        loading : false
+     }
+     fecthData = () =>{
+         this.setState({loading : true});
+         setTimeout(() => {
+            fetch("https://localhost:5000/")
+            .then(response => response.json())
+            .then(json => this.setState({ loading: false }));
+            }, 1200);   
+     }
+    render() {
+        const{loading} = this.state;
+        return(
+            <div className = "word">
+              <img src={BlackLogo}
+                alt = "hat"
+                className = "magic-hat"/>
+                <h2 className="magic-header">
+                    Paste and UPLOAD the link here. 
+                    <p></p>
+                    Then press SCRIBE and we will transcribe the video for you!
+                </h2>
+
+                {/* Simple textfield */}
+                <form className="magic-url">
+                    <Textfield
+                        label="URL..."
+                        style={{width: '400px'}}
+                        input="URL"
+                    />
+                    {/* Accent-colored button with ripple */}
+                    <Button raised accent ripple
+                        className="magic-button"
+                        onChange={() => {}}
+                        style={{margin:"3%"}}>
+                        Upload
+                    </Button>
+                        {/* Colored Raised button */}
+                    <Button raised colored style={{margin: "0%" }} onClick={this.fecthData} disabled={loading} href="/magictwo"> 
+                        {loading && <Spinner animation="border" />}
+                        SCRIBE!</Button>
+                    <div className="magic-progress">
+                        {/* Progress Bar with Indeterminate Progress */}
+                        <ProgressBar indeterminate position="left"/>
+                    </div> 
+                </form>
+                <p className='magic-player'>
+                    {/* Video Preview */}
+                    <ReactPlayer
+                    className='react-player'
+                    url="https://www.youtube.com/embed/kKMF93xkmT0"
+                    minWidth='55%'
+                    minHeight='55%'
+                    />
+
+                </p>
+                <h4>
+                    Please wait as we are scribing the video...
+                </h4>
+            </div>      
+        );
+    }
+}
+export default Magic;

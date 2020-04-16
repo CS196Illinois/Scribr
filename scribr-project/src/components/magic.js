@@ -11,7 +11,6 @@ import ReactPlayer from 'react-player';
 class Magic extends Component {
     state = { }
     render() {
-        var isDisabled = true;
         return(
             <div className = "word">
               <img src={BlackLogo}
@@ -29,13 +28,6 @@ class Magic extends Component {
                         label="URL..."
                         style={{width: '400px'}}
                         input="URL"
-                        if URL: true {
-                            <Button 
-                                disabled={false}
-                                raised colored style={{margin: "0%" }}>
-                                SCRIBE!
-                            </Button>                        
-                        }
                     />
                     {/* Accent-colored button with ripple */}
                     <Button raised accent ripple

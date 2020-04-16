@@ -40,7 +40,7 @@ class Magic extends Component {
                     <Button href="/magictwo" 
                         disabled={true}
                         raised colored style={{margin: "0%" }}>
-                        S!
+                        SCRIBE!
                     </Button>
                     <div className="magic-progress">
                         {/* Progress Bar with Indeterminate Progress */}

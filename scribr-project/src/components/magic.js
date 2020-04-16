@@ -10,7 +10,6 @@ import ReactPlayer from 'react-player';
 
 class Magic extends Component {
     state = { }
-    this.state = {value: ''};
     render() {
         return(
             <div className = "word">
@@ -30,7 +29,7 @@ class Magic extends Component {
                         style={{width: '400px'}}
                         input="URL"
                         if URL: true {
-                            value={this.state.value}
+                            this.state.value
                         }
                     />
                     {/* Accent-colored button with ripple */}

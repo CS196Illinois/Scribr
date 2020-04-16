@@ -10,7 +10,7 @@ import ReactPlayer from 'react-player';
 
 class Magic extends Component {
     state = { 
-        isDisabled: true
+        var isDisabled = true
     }
     render() {
         return(
@@ -31,7 +31,7 @@ class Magic extends Component {
                         style={{width: '400px'}}
                         input="URL"
                         if URL: true {
-                            this.isDisabled: false
+                            isDisabled = false;
                         }
                     />
                     {/* Accent-colored button with ripple */}

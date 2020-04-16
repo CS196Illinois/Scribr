@@ -37,7 +37,7 @@ class Magic extends Component {
                         Upload
                     </Button>
                         {/* Colored Raised button */}
-                    <Button href="/magictwo" 
+                    <Button 
                         disabled={true}
                         raised colored style={{margin: "0%" }}>
                         SCRIBE!

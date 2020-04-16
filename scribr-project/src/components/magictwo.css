@@ -1,0 +1,80 @@
+.index {
+
+    color:black;
+
+}
+
+.button {
+
+    padding: 0%;
+
+}
+
+.name {
+
+    font-size: 1cm;
+
+    margin-left: 0.8in;
+
+}
+
+.image {
+
+    margin-left: 0.8in;
+
+}
+
+.icon {
+
+    margin-left:0.8in;
+
+    margin-right:0.4in;
+
+}
+
+.quote {
+
+    font-style: italic;
+
+    margin-left: 1.9in;
+
+    font-size: 0.5cm;
+
+}
+
+.introduction {
+
+    margin-left: 1.9in;
+
+    font-size: 0.4cm;
+
+}
+
+.button {
+
+    display: block;
+    margin-left: 18%;
+
+}
+
+.icon2 {
+
+    margin-right:0.1in;
+
+    margin-left:0.8in;
+
+}
+.video {
+    display: block;
+    margin: auto;
+}
+
+.twoButtons {
+    margin-left: 60%;
+    margin-bottom: 2%
+}
+
+textarea {
+    text-align: center;
+    font-size: 20px;
+}

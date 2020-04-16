@@ -28,6 +28,9 @@ class Magic extends Component {
                         label="URL..."
                         style={{width: '400px'}}
                         input="URL"
+                        if (input: true) {
+                            value={this.state.value}
+                        }
                     />
                     {/* Accent-colored button with ripple */}
                     <Button raised accent ripple
@@ -38,7 +41,7 @@ class Magic extends Component {
                     </Button>
                         {/* Colored Raised button */}
                     <Button 
-                        disabled={true}
+                        disabled={!this.state.value}
                         raised colored style={{margin: "0%" }}>
                         SCRIBE!
                     </Button>

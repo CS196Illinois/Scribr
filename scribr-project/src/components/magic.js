@@ -10,7 +10,7 @@ import Dropzone from './Dropzone';
 // TODO: Make a loading screen so that user knows the progress of transcription before it goes to magictwo page - Jessica
 
 class Magic extends Component {
-    state = {  }
+
     render() {
         return(
             <div className = "word">
@@ -32,7 +32,7 @@ class Magic extends Component {
                     />
                     
                     {/* To Drop file (Dropzone) */}
-                    <Dropzone onFilesAdded={console.log}/>
+                    <Dropzone/>
 
                     {/* Accent-colored button with ripple */}
                     <Button raised accent ripple

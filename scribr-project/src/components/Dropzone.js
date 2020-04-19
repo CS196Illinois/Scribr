@@ -1,62 +1,77 @@
-import React, {Component} from 'react'
-import './Dropzone.css'
+import React, { Component } from 'react'
+// installed package axios
+import axios from 'axios';
 
 class Dropzone extends Component {
-    constructor(props) {
-        super(props);
-        this.fileInputRef = React.createRef();
-        this.openFileDialog = this.openFileDialog.bind(this);
-        this.onFilesAdded = this.onFilesAdded.bind(this);
+    // initial has no file
+    state = {
+        selectedFile: null
+    }
+    // when file is selcted
+    onFileSelect = event => {
+        // update state
+        this.setState({ selectedFile: event.target.files[0] });
     }
 
-    // to open the fileExplorer dialog
-    openFileDialog() {
-        if (this.props.disabled) return;
-        this.fileInputRef.current.click();
-    }
-
-    // event of adding files
-    onFilesAdded(event) {
-        if (this.props.disabled) return;
-        const files = event.target.files;
-        if (this.props.onFilesAdded) {
-            const array = this.fileListToArray(files);
-            this.props.onFilesAdded(array);
-        }
-    }
-
-    // event of 
-    fileListToArray(list) {
-        const array = [];
-        for (var i = 0; i < list.length; i++) {
-            array.push(list.item(i));
-        }
-        return array;
-    }
-
-    // rendering and output of the area - TO DECORATE
-    render() {
-        return (
-            <div className="Dropzone"
-                onClick={this,this.openFileDialog}
-                style={{ cursor: this.props.disabled ? "default" : "pointer" }}>
-                {/* unsure if img code is essential */}
-                <img
-                    alt="upload"
-                    className="Icon"
-                    src="baseline-cloud_upload-24px.svg"
-                />
-
-                <input
-                    ref={this.fileInputRef}
-                    className="FileInput"
-                    type="file"
-                    multiple
-                    onChange={this.onFilesAdded}/>
-                <span>Drop File</span>
-            </div>
+    // on file upload (when the upload button is clicked)
+    onFileUpload = () => {
+        // creares an object of formData
+        const formData = new FormData();
+        // update formData object
+        formData.append(
+            "myFile",
+            this.state.selectedFile,
+            this.state.selectedFile.name
         );
+        // details of uploaded file
+        console.log(this.state.selectedFile);
+
+        // REQUEST MADE TO THE BACKEND API
+        // sends formData object
+        axios.post("api/uploadfile", formData);
     }
+
+    // file content to be diplayed after file upload is complete
+    fileData = () => {
+        if (this.state.selectedFile) {
+            return (
+                <div>
+                    <h2>File Details:</h2> 
+                    <p>File Name: {this.state.selectedFile.name}</p> 
+                    <p>File Type: {this.state.selectedFile.type}</p> 
+                    <p> 
+                    Last Modified:{" "} 
+                    {this.state.selectedFile.lastModifiedDate.toDateString()} 
+                    </p> 
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    <br />
+                    <h4>Choose before Pressing the Upload button</h4>
+                </div>
+            );
+        }
+    };
+
+
+  render() {
+    return (
+      <div>
+        <h1>
+            Upload Local Files here:
+        </h1>
+        <div>
+            <input type="file" onChange={this.onFileChange} /> 
+            <button onClick={this.onFileUpload}> 
+                Upload! 
+            </button> 
+        </div>
+        {this.fileData()}
+      </div>
+    );
+  }
 }
 
-export default Dropzone
+export default Dropzone;

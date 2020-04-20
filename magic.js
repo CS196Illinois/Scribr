@@ -11,19 +11,29 @@ import Spinner from 'react-bootstrap/Spinner'
 // TODO: Make a loading screen so that user knows the progress of transcription before it goes to magictwo page - Jessica
 
 class Magic extends Component {
-    state = { 
-        loading : false
-     }
-     fecthData = () =>{
+    constructor(props) {
+        super(props);
+        this.state = {
+          loading: false,
+          message: '',
+          error: null,
+          query : ''
+        };
+      }
+     fetchData = () =>{
          this.setState({loading : true});
-         setTimeout(() => {
-            fetch("https://localhost:5000/")
-            .then(response => response.json())
-            .then(json => this.setState({ loading: false }));
-            }, 1200);   
+        fetch("http://127.0.0.1:5000/")
+        .then(response => response.json())
+        .then(data => this.setState({ loading: false, message: data}))
+        .catch(error => this.setState({error, loading: false}));;   
      }
+     handleInputChange = () => {
+        this.setState({
+          query: this.search.value
+        })
+      }
     render() {
-        const{loading} = this.state;
+        var {loading, message, error} = this.state;
         return(
             <div className = "word">
               <img src={BlackLogo}
@@ -40,8 +50,9 @@ class Magic extends Component {
                     <Textfield
                         label="URL..."
                         style={{width: '400px'}}
-                        input="URL"
+                        onChange={() => {this.handleInputChange}}
                     />
+                    <p>{this.state.query}</p>
                     {/* Accent-colored button with ripple */}
                     <Button raised accent ripple
                         className="magic-button"
@@ -50,7 +61,7 @@ class Magic extends Component {
                         Upload
                     </Button>
                         {/* Colored Raised button */}
-                    <Button raised colored style={{margin: "0%" }} onClick={this.fecthData} disabled={loading} href="/magictwo"> 
+                    <Button raised colored style={{margin: "0%" }} onClick={this.fetchData} disabled={loading}> 
                         {loading && <Spinner animation="border" />}
                         SCRIBE!</Button>
                     <div className="magic-progress">
@@ -68,11 +79,13 @@ class Magic extends Component {
                     />
 
                 </p>
-                <h4>
-                    Please wait as we are scribing the video...
-                </h4>
+                <div className="pdf-preview">
+                {error ? <p>{error.message}</p> : null}
+                {loading ? <p>Loading...</p> : (<p>{message}</p>)}
+                </div>
             </div>      
         );
     }
 }
 export default Magic;
+

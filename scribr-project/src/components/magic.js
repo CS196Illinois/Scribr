@@ -3,14 +3,31 @@ import BlackLogo from '../pictures/blacklogo.png';
 import './magic.css';
 import { Textfield, Button, ProgressBar } from 'react-mdl'
 import ReactPlayer from 'react-player';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Spinner from 'react-bootstrap/Spinner'
 
 // TODO: button to open up file explorer, letting user input video file - Julie
 // TODO: make transcribe button un-clickable until video is put in - Alyssa
 // TODO: Make a loading screen so that user knows the progress of transcription before it goes to magictwo page - Jessica
 
 class Magic extends Component {
-    state = {  }
+    constructor(props) {
+        super(props);
+        this.state = {
+          loading: false,
+          message: '',
+          error: null,
+        };
+      }
+     fetchData = () =>{
+         this.setState({loading : true});
+        fetch("http://127.0.0.1:5000/")
+        .then(response => response.json())
+        .then(data => this.setState({ loading: false, message: data}))
+        .catch(error => this.setState({error, loading: false}));;   
+     }
     render() {
+        var {loading, message, error} = this.state;
         return(
             <div className = "word">
               <img src={BlackLogo}
@@ -27,7 +44,6 @@ class Magic extends Component {
                     <Textfield
                         label="URL..."
                         style={{width: '400px'}}
-                        input="URL"
                     />
                     {/* Accent-colored button with ripple */}
                     <Button raised accent ripple
@@ -37,7 +53,9 @@ class Magic extends Component {
                         Upload
                     </Button>
                         {/* Colored Raised button */}
-                    <Button href="/magictwo" raised colored style={{margin: "0%" }}>SCRIBE!</Button>
+                    <Button raised colored style={{margin: "0%" }} onClick={this.fetchData} disabled={loading}> 
+                        {loading && <Spinner animation="border" />}
+                        SCRIBE!</Button>
                     <div className="magic-progress">
                         {/* Progress Bar with Indeterminate Progress */}
                         <ProgressBar indeterminate position="left"/>
@@ -53,9 +71,10 @@ class Magic extends Component {
                     />
 
                 </p>
-                <h4>
-                    Please wait as we are scribing the video...
-                </h4>
+                <div className="pdf-preview">
+                {error ? <p>{error.message}</p> : null}
+                {loading ? <p>Loading...</p> : (<p>{message}</p>)}
+                </div>
             </div>      
         );
     }

@@ -17,6 +17,7 @@ class Magic extends Component {
             this.setState({
                 disabled: false
             });
+        }
     }
     render() {
         var buttonDisabled = true;

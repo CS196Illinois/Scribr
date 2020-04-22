@@ -10,7 +10,7 @@ import ReactPlayer from 'react-player';
 
 class Magic extends Component {
     state = { }
-    let boolean = true;
+    var disabled = true;
     render() {
         return(
             <div className = "word">

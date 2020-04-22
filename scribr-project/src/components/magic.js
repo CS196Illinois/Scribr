@@ -13,7 +13,7 @@ class Magic extends Component {
         disabled: true
     }
     handleChange = (e) => {
-        if(e.target.value.length > 0) {
+        if(e.target.value.length > 4) {
             this.setState({
                 disabled: false
             });

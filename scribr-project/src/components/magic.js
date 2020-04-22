@@ -12,6 +12,7 @@ class Magic extends Component {
     state = { }
     render() {
         return(
+            let boolean = true;
             <div className = "word">
               <img src={BlackLogo}
                 alt = "hat"
@@ -38,7 +39,7 @@ class Magic extends Component {
                     </Button>
                         {/* Colored Raised button */}
                     <Button 
-                        disabled={true}
+                        disabled={boolean}
                         id="scribeButton"
                         raised colored style={{margin: "0%" }}>
                         SCRIBE!

@@ -12,6 +12,12 @@ class Magic extends Component {
     state = {
         disabled: true
     }
+    handleChange = (e) => {
+        if(e.target.value.length > 0) {
+            this.setState({
+                disabled: false
+            });
+    }
     render() {
         var buttonDisabled = true;
         return(
@@ -24,7 +30,6 @@ class Magic extends Component {
                     <p></p>
                     Then press SCRIBE and we will transcribe the video for you!
                 </h2>
-
                 {/* Simple textfield */}
                 <form className="magic-url">
                     <Textfield
@@ -44,6 +49,8 @@ class Magic extends Component {
                     <Button 
                         disabled={buttonDisabled}
                         id="scribeButton"
+                        onChange=this.handleChange
+
                         raised colored style={{margin: "0%" }}>
                         SCRIBE!
                     </Button>

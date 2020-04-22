@@ -49,8 +49,8 @@ class Magic extends Component {
                         {/* Colored Raised button */}
                     <Button 
                         buttonDisabled={this.state.disabled}
-                        id="scribeButton"
-                        //raised colored style={{margin: "0%" }}>
+                        id="scribeButton">
+                        //raised colored style={{margin: "0%" }}
                         SCRIBE!
                     </Button>
                     <div className="magic-progress">

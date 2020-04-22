@@ -38,7 +38,6 @@ class Magic extends Component {
                         style={{width: '400px'}}
                         input="URL"
                         onChange={this.handleChange}
-                        buttonDisabled={this.state.disabled}
                     />
                     {/* Accent-colored button with ripple */}
                     <Button raised accent ripple
@@ -49,7 +48,7 @@ class Magic extends Component {
                     </Button>
                         {/* Colored Raised button */}
                     <Button 
-                        disabled={buttonDisabled}
+                        buttonDisabled={this.state.disabled}
                         id="scribeButton"
                         raised colored style={{margin: "0%" }}>
                         SCRIBE!

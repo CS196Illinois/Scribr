@@ -50,7 +50,7 @@ class Magic extends Component {
                     <Button 
                         disabled={buttonDisabled}
                         id="scribeButton"
-                        onChange=this.handleChange
+                        onChange={this.handleChange}
 
                         raised colored style={{margin: "0%" }}>
                         SCRIBE!

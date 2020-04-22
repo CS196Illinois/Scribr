@@ -39,7 +39,7 @@ class Magic extends Component {
                     </Button>
                         {/* Colored Raised button */}
                     <Button 
-                        disabled={boolean}
+                        disabled={disabled}
                         id="scribeButton"
                         raised colored style={{margin: "0%" }}>
                         SCRIBE!

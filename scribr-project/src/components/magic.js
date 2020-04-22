@@ -29,9 +29,7 @@ class Magic extends Component {
                         label="URL..."
                         style={{width: '400px'}}
                         input="URL"
-                        <If input!={""}>
-                            <disabled=false
-                        </If>
+                        disabled=false;
                     />
                     {/* Accent-colored button with ripple */}
                     <Button raised accent ripple

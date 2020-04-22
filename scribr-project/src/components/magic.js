@@ -10,8 +10,8 @@ import ReactPlayer from 'react-player';
 
 class Magic extends Component {
     state = { }
-    var disabled = true;
     render() {
+        var disabled = true;
         return(
             <div className = "word">
               <img src={BlackLogo}

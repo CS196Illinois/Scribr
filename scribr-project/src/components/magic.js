@@ -29,7 +29,7 @@ class Magic extends Component {
                         label="URL..."
                         style={{width: '400px'}}
                         input="URL"
-                        if magic-url.value != "" {
+                        if input.value != "" {
                             disabled=false;
                         }
                     />

@@ -29,8 +29,13 @@
     display: block;
 }
 
-.magic-button {
+.magic-button:disabled {
     padding-left: 8%;
+}
+
+.magic-botton:enabled {
+    background-color: blue;
+    color: white;
 }
 
 .magic-space {

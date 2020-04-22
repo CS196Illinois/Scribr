@@ -10,9 +10,9 @@ import ReactPlayer from 'react-player';
 
 class Magic extends Component {
     state = { }
+    let boolean = true;
     render() {
         return(
-            let boolean = true;
             <div className = "word">
               <img src={BlackLogo}
                 alt = "hat"

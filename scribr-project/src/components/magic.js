@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import BlackLogo from '../pictures/blacklogo.png';
 import './magic.css';
-import { Textfield, Button, ProgressBar } from 'react-mdl'
+import { Textfield, Button, ProgressBar } from 'react-mdl';
 import ReactPlayer from 'react-player';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Spinner from 'react-bootstrap/Spinner'
+import Dropzone from './Dropzone';
+
 
 // TODO: button to open up file explorer, letting user input video file - Julie
 // TODO: make transcribe button un-clickable until video is put in - Alyssa
@@ -26,6 +28,7 @@ class Magic extends Component {
         .then(data => this.setState({ loading: false, message: data}))
         .catch(error => this.setState({error, loading: false}));;   
      }
+
     render() {
         var {loading, message, error} = this.state;
         return(
@@ -45,6 +48,10 @@ class Magic extends Component {
                         label="URL..."
                         style={{width: '400px'}}
                     />
+                    
+                    {/* To Drop file (Dropzone) */}
+                    <Dropzone/>
+
                     {/* Accent-colored button with ripple */}
                     <Button raised accent ripple
                         className="magic-button"

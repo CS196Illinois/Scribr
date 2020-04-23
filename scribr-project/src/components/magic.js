@@ -47,12 +47,7 @@ class Magic extends Component {
                         Upload
                     </Button>
                         {/* Colored Raised button */}
-                    <Button 
-                        buttonDisabled={this.state.disabled}
-                        id="scribeButton"
-                        raised colored style={{margin: "0%" }}>
-                        SCRIBE!
-                    </Button>
+                    <Button disabled="true" >SCRIBE!</Button>
                     <div className="magic-progress">
                         {/* Progress Bar with Indeterminate Progress */}
                         <ProgressBar indeterminate position="left"/>

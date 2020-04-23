@@ -33,6 +33,11 @@
     padding-left: 8%;
 }
 
+.magic-button:enabled {
+    background-color: blue;
+    color: white;
+}
+
 .magic-space {
     color: white;
 }

@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import BlackLogo from '../pictures/blacklogo.png';
 import './magic.css';
-import { Textfield, Button, ProgressBar } from 'react-mdl'
+import { Textfield, Button, ProgressBar } from 'react-mdl';
 import ReactPlayer from 'react-player';
+import Dropzone from './Dropzone';
 
 // TODO: button to open up file explorer, letting user input video file - Julie
 // TODO: make transcribe button un-clickable until video is put in - Alyssa
 // TODO: Make a loading screen so that user knows the progress of transcription before it goes to magictwo page - Jessica
 
 class Magic extends Component {
-    state = {  }
+
     render() {
         return(
             <div className = "word">
@@ -29,6 +30,10 @@ class Magic extends Component {
                         style={{width: '400px'}}
                         input="URL"
                     />
+                    
+                    {/* To Drop file (Dropzone) */}
+                    <Dropzone/>
+
                     {/* Accent-colored button with ripple */}
                     <Button raised accent ripple
                         className="magic-button"

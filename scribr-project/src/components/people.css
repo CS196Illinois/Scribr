@@ -1,0 +1,25 @@
+.column {
+    float: left;
+    width: 15%;
+    margin-left: 8%;
+}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.columnone {
+    float: left;
+    width: 20%;
+    margin-top: 5%;
+    margin-left: 4%;
+}
+
+h2 {
+    font: sans-serif;
+    text-align: center;
+}
+

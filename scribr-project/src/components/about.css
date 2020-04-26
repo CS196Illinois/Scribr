@@ -1,0 +1,109 @@
+
+.about-header {
+    display: block;
+    margin-bottom: 0px;
+    border-top: 1px solid #cccccc;
+}
+
+.about-header::after {
+    content: "";
+    background: url('../pictures/low-poly-texture-63.png');
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 300px;
+    position: absolute;
+    z-index: -1; 
+    margin-bottom: 0px;
+}
+.about-header h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+}
+
+.about-header h3{
+    color: #000;
+    font-size: 28px;
+    margin-top: 0px;
+    text-align:center;
+    margin-bottom: 40px;
+}
+
+.about-header h4{
+    color: darkblue;
+    font-family: monospace;
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+.explanation {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.exp {
+    min-width: 700px;
+    max-width: 2500px;
+    max-height: 2600px;
+}
+
+.exp1 {
+    margin-top: 40px;
+}
+
+.exp2{
+    margin-right: 10px;
+    text-align: center;
+}
+
+.aboutimage {
+    width: 1100px;
+    height: 550px;
+}
+
+
+.HIW {
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.How {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.how {
+    width: 200px;
+}
+
+.how h3{
+    font-size: 22px;
+    font-weight: bold;
+    color: #363636;
+}
+
+.how p{
+    width: 700px;
+}
+
+.download {
+    width: 30px;
+    height: 30px;
+}
+
+.api {
+    width: 40px;
+    height: 40px;
+}
+
+.video {
+    width: 42px;
+    height: 42px;
+}

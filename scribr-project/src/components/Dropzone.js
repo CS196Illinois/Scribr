@@ -46,12 +46,7 @@ class Dropzone extends Component {
                 </div>
             );
         } else {
-            return (
-                <div>
-                    <br />
-                    <h4>Choose before Pressing the Upload button</h4>
-                </div>
-            );
+            
         }
     };
 

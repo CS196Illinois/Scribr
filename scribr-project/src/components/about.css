@@ -1,6 +1,7 @@
 
 .about-header {
     display: block;
+    text-align: center;
     margin-bottom: 0px;
     border-top: 1px solid #cccccc;
 }
@@ -13,7 +14,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    height: 300px;
+    height: 320px;
     position: absolute;
     z-index: -1; 
     margin-bottom: 0px;
@@ -34,39 +35,44 @@
     margin-bottom: 40px;
 }
 
-.about-header h4{
-    color: darkblue;
-    font-family: monospace;
-    font-size: 30px;
-    margin-top: 0px;
-}
-
-.explanation {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.exp {
-    min-width: 700px;
-    max-width: 2500px;
-    max-height: 2600px;
-}
-
-.exp1 {
-    margin-top: 40px;
-}
-
-.exp2{
-    margin-right: 10px;
+.about-header Button {
+    font-size: 15px;
     text-align: center;
 }
 
-.aboutimage {
-    width: 1100px;
-    height: 550px;
+.definition {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+
+    margin-bottom: 0px;
 }
 
+.def-bar h1 {
+    position: absolute;
+    top: 368px;
+    left: 590px;
+    font-size: 22px;
+}
+
+.barimage {
+    
+    height: 85px;
+    width: 800px;
+
+}
+
+.aboutimage {
+    margin-left: 50px;
+    width: 1060px;
+    height: 600px;
+}
+
+.operation {
+    background-color: #ffe8de;
+}
 
 .HIW {
     font-weight: bold;
@@ -76,11 +82,16 @@
 .How {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .how {
     width: 200px;
+    margin: 20px;
+}
+
+.how img {
+    margin-left: 0;
 }
 
 .how h3{
@@ -90,7 +101,8 @@
 }
 
 .how p{
-    width: 700px;
+    width: 350px;
+    font-size: 15px;
 }
 
 .download {

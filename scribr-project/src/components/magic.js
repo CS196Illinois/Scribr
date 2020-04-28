@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import video from '../pictures/video.png';
 import api from '../pictures/api (1).png';
 import download from '../pictures/ui.png';
+import chip from '../pictures/chip(9).png';
 import './magic.css';
-import { Textfield, Button, ProgressBar } from 'react-mdl';
 import ReactPlayer from 'react-player';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Spinner from 'react-bootstrap/Spinner'
 import Dropzone from './Dropzone';
-import ReactTypingEffect from 'react-typing-effect';
+import { Button, Container } from '@material-ui/core';
 
 
 // TODO: button to open up file explorer, letting user input video file - Julie
@@ -36,69 +35,51 @@ class Magic extends Component {
         var {loading, message, error} = this.state;
         return(
             <div className = "word">
-                <div className="magic-header">
-                    <h1>Video Transcription? We got this.</h1>
-                    <h3> 
-                        For free, transcript as many videos as you want!
-                    </h3>
-                    <h4>
-                        <ReactTypingEffect
-                            text="#Scribr #Free Transcription #99% Accuracy"
-                        />                        
-                    </h4>
-                    
-                </div>
                 
-           
-                <h2 className="HIW">How It Works</h2>
-                <br></br>
-                <div className="How">
-                    <div className="how upload">
-                        <img src={video} alt="video" className="img video"/>
-                        <h3>Upload Video Files</h3>
-                        <p>
-                        Choose .mp4 video files from your computer. Then, click Scribr!. 
-                        </p>
-                    </div>
-                    <div className="how transcribe">
-                        <img src={api} alt="api" className="img api"/>
-                        <h3>Transcribe</h3>
-                        <p>
-                            Using Google Speech-to-Text API, we transcribe any videos 24/7 with high accuracy. 
-                        </p>
-                    </div>
-                    <div className="how receive">
-                        <img src={download} alt="download" className="img download"/>
-                        <h3>Receive</h3>
-                        <p>
-                            Simply click Download to save and view with our tools.
-                        </p>
-                    </div>
+                <div className="magic-header">
+                    
+                    <h1>Now, it's your turn to Scribe!</h1>
+                    <p>Upload your video files, click Scribe, and that's it.<br></br>At the end, you can either view or download your transcript.</p>
                 </div>
+
 
                 <div className="magic-body">
-                    <div className="mbody b1">
-                        <h2>Get Started >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></h2>
-                    </div>
-                    <div className="mbody b2">
+                    <div className="dropBox">
                         <Dropzone/>
+                    </div>
+                    <div  className="chips">
+                        <div className="chip chip1">
+                            <img className="chipimg chip-video" src={chip} alt="chipvideoimage"/>
+                        </div>
+                        <div className="chip chip2">
+                            <img className="chipimg chip-script" src={chip} alt="chipscriptimage"/>
+                        </div>
                     </div>
                 </div>
                 
+                <div className="magic-result">
+                    <p className='magic-player'>
+                        {/* Video Preview */}
+                        <ReactPlayer
+                        className='react-player'
+                        url="https://www.youtube.com/embed/kKMF93xkmT0"
+                        width='20%'
+                        height='20%'
+                        />
+                    </p>
+                    <div className="pdf-preview">
+                    {error ? <p>{error.message}</p> : null}
+                    {loading ? <p>Loading...</p> : (<p>{message}</p>)}
+                    </div>
+                    <div className="script">
 
-                <p className='magic-player'>
-                    {/* Video Preview */}
-                    <ReactPlayer
-                    className='react-player'
-                    url="https://www.youtube.com/embed/kKMF93xkmT0"
-                    width='20%'
-                    height='20%'
-                    />
-                </p>
-                <div className="pdf-preview">
-                {error ? <p>{error.message}</p> : null}
-                {loading ? <p>Loading...</p> : (<p>{message}</p>)}
+                    </div>
+                    <div className="download">
+                        <Button variant="contained" color="secondary" size="medium"><font size="4">Download</font></Button>
+                    </div>
                 </div>
+
+                
             </div>      
         );
     }

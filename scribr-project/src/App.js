@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Layout, Navigation, Content, Header} from 'react-mdl';
+import {Layout, Navigation, Content, Header, Footer} from 'react-mdl';
 import Logo from './pictures/logo.png';
 import LogoHat from './pictures/logo_hat.png';
 import Main from './components/main';
@@ -36,6 +36,7 @@ function App() {
           <div className="page-content"/>
           <Main />
         </Content>
+        
     </Layout>
 </div>
   );

@@ -1,3 +1,29 @@
+.compre {
+    display: block;
+    text-align: center;
+    margin-bottom: 0px;
+    border-top: 1px solid #cccccc;
+}
+
+.compre::after {
+    content: "";
+    background: url('../pictures/low-poly-texture-65.png');
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    z-index: -1; 
+    margin-bottom: 0px;
+}
+
+.compre h2{
+    font-family: 'Prata', serif;
+    margin: 40px;
+}
+
 .column {
     float: left;
     width: 15%;

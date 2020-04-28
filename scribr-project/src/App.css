@@ -9,6 +9,10 @@
   margin-top: 20px;
 }
 
-.nav-bar{
-  border-bottom: 1px solid #333;
+.tail h4 {
+  text-align: left;
+}
+
+.tail {
+  position: sticky;
 }

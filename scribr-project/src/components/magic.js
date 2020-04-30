@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import video from '../pictures/video.png';
-import api from '../pictures/api (1).png';
-import download from '../pictures/ui.png';
 import chip from '../pictures/chip(9).png';
 import './magic.css';
 import ReactPlayer from 'react-player';
@@ -47,7 +44,7 @@ class Magic extends Component {
                     <div className="dropBox">
                         <Dropzone/>
                     </div>
-                    <div  className="chips">
+                    <div className="chips">
                         <div className="chip chip1">
                             <img className="chipimg chip-video" src={chip} alt="chipvideoimage"/>
                         </div>
@@ -55,9 +52,8 @@ class Magic extends Component {
                             <img className="chipimg chip-script" src={chip} alt="chipscriptimage"/>
                         </div>
                     </div>
-                </div>
                 
-                <div className="magic-result">
+            
                     <p className='magic-player'>
                         {/* Video Preview */}
                         <ReactPlayer
@@ -71,12 +67,12 @@ class Magic extends Component {
                     {error ? <p>{error.message}</p> : null}
                     {loading ? <p>Loading...</p> : (<p>{message}</p>)}
                     </div>
-                    <div className="script">
+                    <div className="script"></div>
+                    
+                </div>
 
-                    </div>
-                    <div className="download">
+                <div className="magic-end">
                         <Button variant="contained" color="secondary" size="medium"><font size="4">Download</font></Button>
-                    </div>
                 </div>
 
                 

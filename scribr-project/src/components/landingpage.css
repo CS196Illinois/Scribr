@@ -2,31 +2,23 @@
     border-top: 1px solid #cccccc;
 }
 
-.words {
-    margin-top: 3%;
-}
-.words h2{
-    font-size: 5rem;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-}
-.words h6{
-    color: white;
-}
 
-.landing-header h1{
-    font-family: 'Roboto Mono', monospace;
+
+.landing-header h2{
+    font-family: 'Trocchi', serif;
+    font-weight: bold;
     margin-top: 40px;
-    margin-left: 230px;
+    word-spacing: 10px;
+    line-height: 30px;
     margin-bottom: 0;
-    font-size: 70px;
-    text-align: left;
+    font-size: 50px;
+    text-align: center;
 
-    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 5s; /* Firefox < 16 */
-        -ms-animation: fadein 5s; /* Internet Explorer */
-         -o-animation: fadein 5s; /* Opera < 12.1 */
-            animation: fadein 5s;
+    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 4s; /* Firefox < 16 */
+        -ms-animation: fadein 4s; /* Internet Explorer */
+         -o-animation: fadein 4s; /* Opera < 12.1 */
+            animation: fadein 4s;
 }
 
 @keyframes fadein {
@@ -58,37 +50,51 @@
     to   { opacity: 1; }
 }
 
-.landing-header img {
-    margin-top: 0px;;
-    margin-right: 130px;
-    width: 720px;
-    height: 260px;
-}
+
 
 .middle-header {
     display: flex;
     justify-content: space-around;
     orientation: row;
+    align-items: center;
 }
 
-.buttons {
+.bsss {
     margin-left: 60px;
     display: flex;
     justify-content: space-between;
-    orientation: column;
+    align-items: center;
+    orientation: row;
     
 }
 
 .spot {
-    margin: 40px;
+    margin-top: 110px;
     align-items: center;
     text-align: center;
-    margin-left: 350px;
+    margin-left: 60px;
 }
+
+/* .spot1 Button {
+    margin-left: 1px;
+} */
 
 .landing-body img {
-    width: 1500px;
-    height: 400px;
+    width: 1950px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 0px;
 }
 
+
+.landing-header h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin-top: 60px;
+    word-spacing: 10px;
+    line-height: 30px;
+    margin-bottom: 0;
+    font-size: 90px;
+    text-align: center;
+}
 

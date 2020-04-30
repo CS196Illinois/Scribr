@@ -20,8 +20,10 @@
 }
 
 .compre h2{
-    font-family: 'Prata', serif;
-    margin: 40px;
+    font-family: serif;
+    margin: 35px;
+    font-size: 50px;
+    font-weight: bolder;
 }
 
 .column {

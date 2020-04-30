@@ -14,7 +14,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    height: 320px;
+    height: 300px;
     position: absolute;
     z-index: -1; 
     margin-bottom: 0px;
@@ -22,17 +22,17 @@
 .about-header h1{
     text-align: center;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 50px;
     margin-top: 60px;
     margin-bottom: 0px;
 }
 
 .about-header h3{
     color: #000;
-    font-size: 28px;
+    font-size: 23px;
     margin-top: 0px;
     text-align:center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .about-header Button {
@@ -41,7 +41,7 @@
 }
 
 .definition {
-    margin-top: 100px;
+    margin-top: 90px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -52,7 +52,7 @@
 
 .def-bar h1 {
     position: absolute;
-    top: 368px;
+    top: 335px;
     left: 590px;
     font-size: 22px;
 }
@@ -66,12 +66,13 @@
 
 .aboutimage {
     margin-left: 50px;
-    width: 1060px;
+    width: 1030px;
     height: 600px;
 }
 
 .operation {
     background-color: #ffe8de;
+    padding: 1px;;
 }
 
 .HIW {
@@ -92,12 +93,14 @@
 
 .how img {
     margin-left: 0;
+    margin-bottom: 5px;
 }
 
 .how h3{
     font-size: 22px;
     font-weight: bold;
     color: #363636;
+    margin: 0;
 }
 
 .how p{

@@ -13,38 +13,38 @@ import Dropzone from './Dropzone';
 // TODO: Make a loading screen so that user knows the progress of transcription before it goes to magictwo page - Jessica
 
 class Magic extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          loading: false,
-          message: '',
-          error: null,
-          disabled: true
-        };
-        handleChange = (e) => {
-            if(e.target.value.length >0) {
-                this.setState({ 
-                    disabled: false
-                });
-            }
-      }
-     fetchData = () =>{
-         this.setState({loading : true});
-        fetch("http://127.0.0.1:5000/")
-        .then(response => response.json())
-        .then(data => this.setState({ loading: false, message: data}))
-        .catch(error => this.setState({error, loading: false}));;   
-     }
+    //constructor(props) {
+        //super(props);
+   state = {
+       loading: false,
+       message: '',
+       error: null,
+       disabled: true
+   }
+   handleChange = (e) => {
+       if(e.target.value.length >0) {
+           this.setState({ 
+               disabled: false
+           });
+       }
+   }
+   fetchData = () =>{
+       this.setState({loading : true});
+       fetch("http://127.0.0.1:5000/")
+       .then(response => response.json())
+       .then(data => this.setState({ loading: false, message: data}))
+       .catch(error => this.setState({error, loading: false}));;   
+   }
 
-    render() {
-        var {loading, message, error} = this.state;
-        var buttonDisabled = true;
-        return(
-            <div className = "word">
-              <img src={BlackLogo}
-                alt = "hat"
-                className = "magic-hat"/>
-                <h2 className="magic-header">
+   render() {
+       var {loading, message, error} = this.state;
+       var buttonDisabled = true;
+       return(
+           <div className = "word">
+             <img src={BlackLogo}
+               alt = "hat"
+               className = "magic-hat"/>
+               <h2 className="magic-header">
                     Paste and UPLOAD the link here. 
                     <p></p>
                     Then press SCRIBE and we will transcribe the video for you!
@@ -94,6 +94,6 @@ class Magic extends Component {
                 </div>
             </div>      
         );
-    };
+    }
 }
 export default Magic;

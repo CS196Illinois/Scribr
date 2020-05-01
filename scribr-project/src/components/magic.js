@@ -19,6 +19,7 @@ class Magic extends Component {
           loading: false,
           message: '',
           error: null,
+          disabled: true
         };
       }
      fetchData = () =>{
@@ -31,6 +32,7 @@ class Magic extends Component {
 
     render() {
         var {loading, message, error} = this.state;
+        var buttonDisabled = true;
         return(
             <div className = "word">
               <img src={BlackLogo}
@@ -47,6 +49,8 @@ class Magic extends Component {
                     <Textfield
                         label="URL..."
                         style={{width: '400px'}}
+                        input="URL"
+                        onChange={this.handleChange}
                     />
                     
                     {/* To Drop file (Dropzone) */}
@@ -60,7 +64,7 @@ class Magic extends Component {
                         Upload
                     </Button>
                         {/* Colored Raised button */}
-                    <Button raised colored style={{margin: "0%" }} onClick={this.fetchData} disabled={loading}> 
+                    <Button raised colored style={{margin: "0%" }} onClick={this.fetchData} disabled={this.state.disabled}> 
                         {loading && <Spinner animation="border" />}
                         SCRIBE!</Button>
                     <div className="magic-progress">

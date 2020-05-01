@@ -21,6 +21,12 @@ class Magic extends Component {
           error: null,
           disabled: true
         };
+        handleChange = (e) => {
+            if(e.target.value.length >0) {
+                this.setState({ 
+                    disabled: false
+                });
+            }
       }
      fetchData = () =>{
          this.setState({loading : true});

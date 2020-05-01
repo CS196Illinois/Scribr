@@ -46,7 +46,7 @@ class Dropzone extends Component {
                 </div>
             );
         } else {
-            
+
         }
     };
 
@@ -58,6 +58,7 @@ class Dropzone extends Component {
             <input type="file" onChange={this.onFileChange} /> 
             <button onClick={this.onFileUpload}> 
                 Scribr! 
+
             </button> 
         </div>
         {this.fileData()}

@@ -7,6 +7,7 @@ import Dropzone from './Dropzone';
 import { Button, Container } from '@material-ui/core';
 
 
+
 // TODO: button to open up file explorer, letting user input video file - Julie
 // TODO: make transcribe button un-clickable until video is put in - Alyssa
 // TODO: Make a loading screen so that user knows the progress of transcription before it goes to magictwo page - Jessica
@@ -74,8 +75,6 @@ class Magic extends Component {
                 <div className="magic-end">
                         <Button variant="contained" color="secondary" size="medium"><font size="4">Download</font></Button>
                 </div>
-
-                
             </div>      
         );
     }

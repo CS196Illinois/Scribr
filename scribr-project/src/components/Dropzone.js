@@ -46,12 +46,7 @@ class Dropzone extends Component {
                 </div>
             );
         } else {
-            return (
-                <div>
-                    <br />
-                    <h4>Choose before Pressing the Upload button</h4>
-                </div>
-            );
+
         }
     };
 
@@ -59,13 +54,11 @@ class Dropzone extends Component {
   render() {
     return (
       <div>
-        <h1>
-            Upload Local Files here:
-        </h1>
         <div>
             <input type="file" onChange={this.onFileChange} /> 
             <button onClick={this.onFileUpload}> 
-                Upload! 
+                Scribr! 
+
             </button> 
         </div>
         {this.fileData()}

@@ -9,11 +9,13 @@ import Jon from '../card/jon';
 import Julie from '../card/julie';
 import Davis from '../card/davis';
 import Albert from '../card/albert';
+
 class People extends Component {
     state = {  }
     render() {
         return(
           <div class="compre">
+             <h2>Meet our team!</h2>
             <div class="row">
               <div class="column">
                  <Albert></Albert>

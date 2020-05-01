@@ -1,24 +1,20 @@
-.landing-header {
-    border-top: 1px solid #cccccc;
-}
-
 
 
 .landing-header h2{
-    font-family: 'Trocchi', serif;
+    font-family: 'Yeseva One', cursive;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 70px;
     word-spacing: 10px;
-    line-height: 30px;
+    line-height: 20px;
     margin-bottom: 0;
     font-size: 50px;
     text-align: center;
 
-    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 4s; /* Firefox < 16 */
-        -ms-animation: fadein 4s; /* Internet Explorer */
-         -o-animation: fadein 4s; /* Opera < 12.1 */
-            animation: fadein 4s;
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5s; /* Firefox < 16 */
+        -ms-animation: fadein 5s; /* Internet Explorer */
+         -o-animation: fadein 5s; /* Opera < 12.1 */
+            animation: fadein 5s;
 }
 
 @keyframes fadein {
@@ -50,38 +46,33 @@
     to   { opacity: 1; }
 }
 
-
-
 .middle-header {
     display: flex;
     justify-content: space-around;
     orientation: row;
-    align-items: center;
 }
 
+
 .bsss {
-    margin-left: 60px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     orientation: row;
-    
+    margin-right: 30px;
 }
 
 .spot {
-    margin-top: 110px;
-    align-items: center;
-    text-align: center;
-    margin-left: 60px;
+    margin-top: 80px;
+    margin-left: 20px;
 }
 
-/* .spot1 Button {
-    margin-left: 1px;
-} */
+.spot2 {
+    text-align: center;
+}
+
 
 .landing-body img {
-    width: 1950px;
-    height: 300px;
+    width: 1990px;
+    height: 340px;
     margin-top: 50px;
     margin-left: 0px;
 }

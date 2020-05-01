@@ -1,5 +1,4 @@
 .word {
-    border-top: 1px solid #cccccc;
     padding: 45px;
     background-image: url(../pictures/bg_magic.jpg);
     width: 100%;
@@ -10,28 +9,7 @@
     align-items: center;
 }
 
-/* .word {
-    display: block;
-    text-align: center;
-    margin-bottom: 0px;
-    padding: 50px;
-    height: 100%;
-    border-top: 1px solid #cccccc;
-}
 
-.word::after {
-    content: "";
-    background: url('../pictures/bg_magic.jpg');
-    opacity: 1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    position: absolute;
-    z-index: -1; 
-    margin-bottom: 0px;
-} */
 
 .magic-header {
     text-align: center;

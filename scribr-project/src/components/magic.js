@@ -94,6 +94,6 @@ class Magic extends Component {
                 </div>
             </div>      
         );
-    }
+    };
 }
 export default Magic;

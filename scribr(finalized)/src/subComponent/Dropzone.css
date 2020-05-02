@@ -1,0 +1,10 @@
+.header {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+.bar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

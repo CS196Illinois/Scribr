@@ -1,0 +1,55 @@
+.compre {
+    display: block;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.compre::after {
+    content: "";
+    background: url('../pictures/low-poly-texture-65.png');
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    z-index: -1; 
+    margin-bottom: 0px;
+}
+
+.compre h2{
+    font-family: serif;
+    margin: 35px;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.column {
+    float: left;
+    width: 15%;
+    margin-left: 8%;
+}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.columnone {
+    float: left;
+    width: 20%;
+    margin-top: 5%;
+    margin-left: 4%;
+}
+
+h2 {
+    font: sans-serif;
+    text-align: center;
+}
+
+.row {
+    margin-top: 3%;
+}

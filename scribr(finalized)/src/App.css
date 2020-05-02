@@ -1,0 +1,23 @@
+.scribr-logo {
+  margin-right: 1100px;
+  margin-top: 18px;
+  width: 240px;
+  height: 60px;
+}
+
+.navigationbar {
+  margin-top: 20px;
+}
+
+.tail h4 {
+  text-align: left;
+}
+
+.tail {
+  position: sticky;
+}
+
+.header {
+  height: 80px;
+  border-bottom: 1px solid #cccccc;
+}

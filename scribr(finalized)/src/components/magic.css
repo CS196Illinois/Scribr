@@ -1,0 +1,34 @@
+.magic-header {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.magic-url {
+    font-size: 25px;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+
+.magic-hat {
+    width: 200px;
+    height: 100px;
+    margin-left: auto;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-right: auto;
+    display: block;
+}
+
+.word{
+    height: 100%;
+    background-image: url('../pictures/63.png');
+    display: flex;
+    flex-direction: column;
+    flex: 1
+}
+
+
+
+
